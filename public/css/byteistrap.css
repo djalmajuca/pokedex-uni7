@@ -1,0 +1,301 @@
+html, body {
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #606c76;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.text-vibur {
+	font-family: 'Vibur', cursive;
+}
+
+.text-merriweather {
+	font-family: 'Merriweather', serif;
+}
+
+.text-roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
+.color-global {
+    background: #30353c;
+}
+
+.primary-color {
+    background: #8bc34a;
+}
+
+.second-color {
+    background: #606c76;
+}
+
+.little-border {
+    border: 1px solid #5c6552;
+}
+
+.bold-border {
+    border: 5px solid #8bc34a;
+}
+
+.color-strong-label {
+    color: #85c34a;
+}
+
+.color-weak-label {
+    color: #81867D;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.container-box {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/***************************************************** Grid *************************************************************/
+
+.container-grid {
+    max-width: 100%;
+}
+
+.container-grid.item {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.item {
+    position: relative;
+    margin: 0 auto 15px auto;
+}
+
+.item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.item .column {
+    float: left;
+    min-height: 50px;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+}
+
+.column2 {
+    width: 50%;
+}
+
+.column3 {
+    width: 33.3333333%;
+}
+
+.column4 {
+    width: 25%;
+}
+
+.column5 {
+    width: 20%;
+}
+
+.column6 {
+    width: 16.666666667%;
+}
+
+/***************************************************** Fluid Images ******************************************************/
+
+.fluid-img-video {
+    max-width: 100%;
+    height:auto;
+}
+
+.card {
+    min-height: 75px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.card h1 , .card span {
+    padding-left: 5px;
+    display: block;
+}
+
+/***************************************************** Table *************************************************************/
+
+.fluid-table > tbody > tr:nth-child(odd) {
+  background-color: #606c76;
+}
+
+.fluid-table {
+    width: 100%;
+    border-collapse:collapse;
+    display: table;
+}
+
+table, th, td {
+  border: none;
+}
+
+td, th {
+  padding: 10px 5px;
+  display: table-cell;
+  vertical-align: middle;
+  border: none;
+}
+
+/***************************************************** Typography ********************************************************/
+
+h1 {
+  font-size: 3.0em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.0rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.0rem;
+  line-height: 1.4;
+}
+
+/***************************************************** Media Queries *****************************************************/
+
+nav,
+section,
+aside{
+  border: 1px solid #8bc34a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+header,
+footer{
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.responsive-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.responsive-container section {
+  flex: 4 1 0;
+  order: 2;
+}
+
+.responsive-container nav, .responsive-container aside {
+  flex: 1 6 0;
+}
+
+.responsive-container nav {
+  order: 1;
+}
+
+.responsive-container aside {
+  order: 3;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+	.responsive-container nav {
+  	order: 1;
+  }
+
+  .responsive-container aside {
+  	order: 2;
+  }
+
+	.responsive-container section {
+		order: 3;
+	}
+
+	.responsive-container {
+		flex-flow: column;
+	}
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .responsive-container nav {
+		flex: 1 auto;
+  	order: 1;
+  }
+
+  .responsive-container aside {
+		flex: 1 auto;
+  	order: 2;
+  }
+
+  .responsive-container section {
+		flex: 1 100%;
+		order: 3;
+	}
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+
+}
+
+
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#EDEDED;
+    list-style:none;
+}
+
+#menu ul li { display: inline; }
+
+#menu ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+
+    /* visual do link */
+    background-color:#EDEDED;
+    color: #333;
+    text-decoration: none;
+    border-bottom:3px solid #EDEDED;
+}
+#menu ul li a:hover {
+    background-color:#D6D6D6;
+    color: #6D6D6D;
+    border-bottom:3px solid #EA0000;
+}
