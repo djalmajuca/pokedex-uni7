@@ -52,9 +52,34 @@ class Pokedex extends Component {
 		event.preventDefault();
 		const name = ReactDOM.findDOMNode(this.refs.name).value;
 		const description = ReactDOM.findDOMNode(this.refs.description).value;
+		const path = ReactDOM.findDOMNode(this.refs.path).value;
 
-		console.log("Nome: " , name);
-		console.log("Description: " , description);
+		let pokemon = {
+			"id": this.state.pokemonList.length + 2,
+			"name": name,
+			"description": description,
+			"img_path": `./images/${path}`
+		}
+
+		this.setState({
+			pokemonList: this.state.pokemonList.concat(pokemon)
+		}, this.insertToJsonServer(pokemon));
+
+		this.clearAllInputs()
+	}
+
+	insertToJsonServer(pokemon) {
+		$.ajax({
+			type: "POST",
+			url: 'http://localhost:3004/pokemons',
+			data: pokemon
+		});
+	}
+
+	clearAllInputs() {
+		ReactDOM.findDOMNode(this.refs.name).value = "";
+		ReactDOM.findDOMNode(this.refs.description).value = "";
+		ReactDOM.findDOMNode(this.refs.path).value = "";
 	}
 
 	render() {
@@ -65,13 +90,15 @@ class Pokedex extends Component {
 						{this.createPokemonCards(this.state.pokemonList)}
 					</div>
 				</div>
-				<div className="container-form">
+				<div className="container-form bold-border">
 					<h3 className="text-merriweather text-center">Novo</h3>
 					<form onSubmit={this.insertNewCard}>
-						<label for="name">Nome: </label>
-						<input className="form-styling" type='text' ref='name' placeholder="Nome"/>
-						<label for="descriptin">Descrição: </label>
-						<textarea ref='description' placeholder="Descrição"></textarea>
+						<label className="label-form color-white" htmlFor="name">Nome: </label>
+						<input className="input-form" type='text' ref='name' />
+						<label className="label-form color-white" htmlFor="descriptin">Descrição: </label>
+						<input className="input-form" type='text' ref='description' />
+						<label className="label-form color-white" htmlFor="descriptin">Path Img: </label>
+						<input className="input-form" type='text' ref='path' />
 						<button type='submit' className="confirm-button">Salvar</button>
 					</form>
 				</div>
