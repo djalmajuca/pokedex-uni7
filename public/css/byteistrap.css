@@ -24,6 +24,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .color-global {
     background: #30353c;
 }

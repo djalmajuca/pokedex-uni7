@@ -1,0 +1,10 @@
+{
+    "pokemons": [
+        {
+            "id": 1,
+            "name": "Gyarados",
+            "description": "Gyarados é um pokemon super raro!",
+            "img_path": "./images/Gyarados.png"
+        }
+    ]
+}
