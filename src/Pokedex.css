@@ -1,0 +1,13 @@
+.Pokedex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Pokedex .container-grid {
+  width: 80%;
+}
+
+.Pokedex .container-form {
+  width: 20%;
+}
+/*1036 px break*/

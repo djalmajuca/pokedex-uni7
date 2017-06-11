@@ -19,7 +19,7 @@ class PokemonCard extends Component {
 
   render() {
     return (
-      <div className="column4 column little-border">
+      <div className="column3 column little-border">
         <div className="card text-roboto text-center">
           <img className="fluid-img-video" src={require(this.props.pokemon.img_path)} alt={this.props.pokemon.name} />
           <h1 className="color-strong-label">{this.props.pokemon.name}</h1>
