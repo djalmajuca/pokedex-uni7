@@ -10,6 +10,8 @@ class Pokedex extends Component {
 		this.state = {
 			pokemonList: []
 		}
+
+		this.createPokemonCard = this.createPokemonCard.bind(this);
 	}
 
 	componentWillMount() {
@@ -26,8 +28,16 @@ class Pokedex extends Component {
 		});
 	};
 
+	showInfo(pokemon) {
+		console.log("Mostrar insformações do pokemon: ", pokemon);
+	}
+
+	remove(id) {
+		console.log("Remover pokemon da lista id: ", id);
+	}
+
 	createPokemonCard(pokemon) {
-		return ( <PokemonCard key={pokemon.id} pokemon={pokemon}/> );
+		return ( <PokemonCard key={pokemon.id} pokemon={pokemon} showInfo={this.showInfo} remove={this.remove}/> );
 	}
 
 	createPokemonCards(pokemonList) {

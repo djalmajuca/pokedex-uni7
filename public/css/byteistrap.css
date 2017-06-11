@@ -64,6 +64,38 @@ body {
     text-align: center;
 }
 
+button {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 40px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 50%;
+}
+
+.confirm-button {
+    background: #85c34a;
+    color: white;
+}
+
+.dangerous-button {
+    background: rgb(160, 55, 55);
+    color: #fff;
+}
+
+.confirm-button:hover {    
+    color: #85c34a;
+    background: #fff;
+}
+
+.dangerous-button:hover {
+    background: #fff;
+    color: rgb(160, 55, 55);
+}
+
 .container {
     width: 100%;
 }
