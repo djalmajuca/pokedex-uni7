@@ -37,7 +37,7 @@ class Pokedex extends Component {
 	}
 
 	remove(id) {
-		this.setState({ pokemonList: this.state.pokemonList.filter(item => item.id !== id) });
+		this.setState({ pokemonList: this.state.pokemonList.filter(item => item.id !== id) }, this.removeToJsonServer(id));
 	}
 
 	createPokemonCard(pokemon) {
@@ -55,7 +55,7 @@ class Pokedex extends Component {
 		const path = ReactDOM.findDOMNode(this.refs.path).value;
 
 		let pokemon = {
-			"id": this.state.pokemonList.length + 2,
+			"id": this.state.pokemonList.length + 15,
 			"name": name,
 			"description": description,
 			"img_path": `./images/${path}`
@@ -73,6 +73,17 @@ class Pokedex extends Component {
 			type: "POST",
 			url: 'http://localhost:3004/pokemons',
 			data: pokemon
+		});
+	}
+
+	removeToJsonServer(id) {
+		console.log('Não ta chamando o id');
+		$.ajax({
+			url: 'http://localhost:3004/pokemons/'+id,
+			type: 'DELETE',
+			success: function (result) {
+				// Do something with the result
+			}
 		});
 	}
 
