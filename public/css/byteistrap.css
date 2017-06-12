@@ -86,6 +86,16 @@ button {
     color: #fff;
 }
 
+.oculto-button {
+    background: #607d8b;
+    color: white;
+}
+
+.inf-button {
+    background: #2196f3;
+    color: white;
+}
+
 .confirm-button:hover {    
     color: #85c34a;
     background: #fff;
