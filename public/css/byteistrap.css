@@ -74,6 +74,7 @@ button {
     border-radius: 40px;
     transition: background-color 0.3s, color 0.3s;
     width: 50%;
+    outline: none;
 }
 
 .confirm-button {
@@ -94,6 +95,11 @@ button {
 .inf-button {
     background: #2196f3;
     color: white;
+}
+
+.inf-button:hover {
+    background: white;
+    color: #2196f3;
 }
 
 .confirm-button:hover {    

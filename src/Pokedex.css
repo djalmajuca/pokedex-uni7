@@ -37,6 +37,14 @@
 }
 /*1036 px break*/
 
+button.close {
+  text-align: right;
+  font-size: 30px;
+}
+
+.close:focus, .close:hover {
+  color: red;
+}
 @media (max-width: 1036px) {
 .Pokedex .container-grid {
   width: 100%;

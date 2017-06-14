@@ -25,8 +25,10 @@ class PokemonCard extends Component {
           <h1 className="color-strong-label">{this.props.pokemon.name}</h1>
           <span className="color-white">{this.props.pokemon.description}</span>
         </div>
+        <div style={{paddingBottom: '5px'}}>
           <button className="inf-button" onClick={this.showInfoCard}>Informações</button>
           <button className="dangerous-button" onClick={this.removeCard}>Deletar</button>
+        </div>
       </div>
     )
   }

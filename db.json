@@ -1,6 +1,12 @@
 {
   "pokemons": [
     {
+      "id": 1,
+      "name": "Articuno",
+      "description": "Articuno é um pokemon super raro!",
+      "img_path": "./images/Articuno.png"
+    },
+    {
       "id": 2,
       "name": "Blastoise",
       "description": "Blastoise é um pokemon super raro!",
