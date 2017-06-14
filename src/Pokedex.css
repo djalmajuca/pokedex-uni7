@@ -55,3 +55,20 @@ button.close {
   margin: 0 auto;
 }
 }
+
+@media (max-width: 793px) {
+  .Pokedex .item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Pokedex .item .column {
+    width: 50%;
+  }
+}
+
+@media (max-width: 538px) {
+  .Pokedex .item .column {
+    width: 100%;
+  }
+}

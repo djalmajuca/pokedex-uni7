@@ -113,6 +113,12 @@
       "name": "Articuno1",
       "description": "Articuno",
       "img_path": "./images/Articuno.png"
+    },
+    {
+      "id": "34",
+      "name": "Articuno3",
+      "description": "Articuno toma a forma de um grande pássaro de plumagem predominantemente azul. Sua coloração é um ciano em sua cauda serpentina com uma crista na cabeça. Sua crista na cabeça é simples, consistindo de três em forma de losango de penas em sua testa. Seu corpo é um azul céu, crescendo mais leve no peito da barriga. Sua característica mais marcante são as suas grandes asas, que parecem que são feitas de gelo.",
+      "img_path": "./images/Articuno.png"
     }
   ]
 }
