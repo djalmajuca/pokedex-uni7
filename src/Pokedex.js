@@ -3,6 +3,7 @@ import PokemonCard from "./PokemonCard";
 import ReactDOM from 'react-dom'
 import './Pokedex.css'
 import $ from "jquery";
+import { Modal } from 'react-bootstrap';
 
 class Pokedex extends Component {
 
@@ -10,12 +11,16 @@ class Pokedex extends Component {
 		super(props);
 
 		this.state = {
-			pokemonList: []
+			pokemonList: [],
+			pokemon: null,
+			infoIsOpen: false
 		}
 
 		this.createPokemonCard = this.createPokemonCard.bind(this);
 		this.remove = this.remove.bind(this);
 		this.insertNewCard = this.insertNewCard.bind(this);
+		this.showInfo = this.showInfo.bind(this);
+		this.hideInfo = this.hideInfo.bind(this);
 	}
 
 	componentWillMount() {
@@ -33,7 +38,11 @@ class Pokedex extends Component {
 	};
 
 	showInfo(pokemon) {
-		console.log("Mostrar insformações do pokemon: ", pokemon);
+		this.setState({pokemon: pokemon, infoIsOpen: true});
+	}
+
+	hideInfo() {
+		this.setState({infoIsOpen: false});
 	}
 
 	remove(id) {
@@ -113,6 +122,14 @@ class Pokedex extends Component {
 						<button type='submit' className="confirm-button">Salvar</button>
 					</form>
 				</div>
+				{this.state.infoIsOpen && 
+					<Modal show={this.state.infoIsOpen} onHide={this.hideInfo}>
+						<Modal.Header closeButton>
+							<Modal.Title>{this.state.pokemon.name}</Modal.Title>
+						</Modal.Header>
+						<Modal.Body>{this.state.pokemon.description}</Modal.Body>
+					</Modal>
+				}
 			</div>
 		);
 	}
